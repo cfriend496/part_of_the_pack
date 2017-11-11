@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+    head
+        script(async src="https://www.googletagmanager.com/gtag/js?id=UA-109028742-1")
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109028742-1');
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="author" content="Colin Friend")
+        meta(name="description" content="Part of the Pack is a fully insured pet care service for Lower Cape Cod, MA. Dog walking, pet sitting, or pet visits. Part of the Pack is experienced with animals of all shapes and sizes. Join the Pack today!")
+        meta(name="keywords" content="dog walking, pet sitting, pet care, pet visits, Cape Cod")
+        title Part of the Pack
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:400,700,900" rel="stylesheet")
+        link(type="text/css" rel="stylesheet" href="vendor/css/owl.carousel.min.css")
+        link(href="nav.min.css" rel="stylesheet" type="text/css")
+        link(href="style.min.css" rel="stylesheet" type="text/css")
+        link(href="public/css/queries.min.css" rel="stylesheet" type="text/css")
+        script(src="https://use.fontawesome.com/6de892528c.js")
+    body
+        nav(id="potp-main-nav")
+            .nav-inner
+                .nav-header
+                    button(type="button" class="toggle-slide" aria-expanded="false")
+                        span.sr-only Toggle navigation
+                        i.fa.fa-paw
+                    a.navbar-logo(href="#home")
+                        img(id="nav-logo" src="public/img/logo/logo-white.svg" alt="part of the pack logo")
+                #potp-nav
+                    ul.nav-list
+                        li
+                            a(href="#about") About Us
+                        li
+                            a(href="#service") Services
+                        li
+                            a(href="#pack-gallery") The Pack
+                        li
+                            a(href="#contact") Contact Us

@@ -1,6 +1,12 @@
-doctype html
-html
-    head
-        title Part of the Pack
-    body
-        h1 App is running
+include partials/header.pug
+header(id="home")
+    #banner-msg
+        h1 What can the pack<br>do for you?
+        ul
+            li
+                a.banner-nav(href="#service") pet visits
+            li
+                a.banner-nav(href="#service") dog walking
+            li
+                a.banner-nav(href="#service") pet sitting
+        a.cta-btn.cta-btn-full(id="banner-btn" href="#service") Learn more
