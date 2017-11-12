@@ -6,8 +6,9 @@ const mailer     =  require("nodemailer");
 const app        =  express();
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
-
+app.use(express.static(__dirname + '/public'));
+app.set('port', (process.env.PORT || 5000));
+app.set('views', __dirname + '/views');
 //--- Application constants
 const acc = {user: "cfeiend4835", pass: "bravO*496"};
 const transporter = mailer.createTransport({
@@ -57,6 +58,6 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname +'/index.html'));
 })
 
-app.listen(5000, function(){
-    console.log("app is running on port 8080...");
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
